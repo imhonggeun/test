@@ -22,4 +22,10 @@ public class FileServiceImp implements FileService{
 		return result;
 	}
 
+	@Override
+	public Map<String, Object> filegotham() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

@@ -16,7 +16,7 @@ public class HomeController {
 	@Autowired//회원관리
 	private RoleUserService roleUserService;
 	
-	@Autowired
+	@Autowired//파일관리
 	private FileService fileService;
   
   @GetMapping("/")
@@ -34,6 +34,12 @@ public class HomeController {
   @GetMapping("/file/total") //전체 파일 수
   public Map<String, Object> fileTotal(){
 	  return fileService.fileTotal();
+  }
+  
+  @ResponseBody
+  @GetMapping("/file/gotham") //각각 생성한 이미지 수
+  public Map<String, Object> filegotham(){
+	  return fileService.filegotham();
   }
 
 }
